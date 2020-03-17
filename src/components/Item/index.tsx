@@ -2,7 +2,19 @@ import React from 'react'
 import './Item.css'
 
 const Item = (props: any) => (
-  <div>
+  <div className="item">
+    <div className="item-properties">
+      <div className="name">
+        {props.item.name}
+      </div>
+      <div className="price">
+        {`Unit Price: ${props.item.unitPrice}$`}
+      </div>
+      <button className="btn-add"
+        onClick={() => props.onAddToCart(props.item)}>
+        Add to Cart
+      </button>
+    </div>
   </div>
 )
 

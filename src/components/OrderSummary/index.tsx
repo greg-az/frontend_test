@@ -4,7 +4,6 @@ import React from 'react'
 const OrderSummary = (props: any) => {
   return (
     <div>
-        { cartItems }
     </div>
   )
 }

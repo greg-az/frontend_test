@@ -1,0 +1,27 @@
+.item {
+  border: 1px solid #222222;
+  width: calc(100% - 5px);
+  margin: 0 0 8px 0;
+  height: 205px;
+  padding: 5px;
+}
+
+.item .thumbnail {
+  float: left;
+}
+
+.item .item-properties {
+  margin: 0 0 0 12px;
+  text-align: left;
+  float: left;
+}
+
+.item .item-properties .name {
+  margin: 0 0 8px 0;
+  font-size: 2vw;
+}
+
+.item .btn-add {
+  cursor: pointer;
+  height: 32px;
+}
