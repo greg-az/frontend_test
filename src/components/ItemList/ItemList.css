@@ -1,0 +1,6 @@
+.item-list {
+  width: calc(100% - 420px);
+  height: calc(100% - 52px);
+  padding: 0 10px;
+  float: left;
+}

@@ -3,6 +3,10 @@ import './Item.css'
 
 const Item = (props: any) => (
   <div className="item">
+    <img  
+      alt={props.item.name} src={props.item.thumbnail}
+      className="thumbnail"
+    />
     <div className="item-properties">
       <div className="name">
         {props.item.name}

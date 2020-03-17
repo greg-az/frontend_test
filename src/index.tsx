@@ -1,20 +1,23 @@
-import React from 'react';
-import './index.css';
-import * as serviceWorker from './serviceWorker';
-import store from './store'
-import { Provider } from 'react-redux'
-import { render } from 'react-dom'
-import App from './containers/app'
+import { createStore, applyMiddleware, compose } from 'redux'
+import rootReducer from './reducers'
+import thunk from 'redux-thunk'
 
-const target = document.querySelector('#root')
+const enhancers: never[] = []
+const middleware = [
+  thunk
+]
 
-render(
-  <Provider store={store}>
-      <div>
-        <App/>
-      </div>
-  </Provider>,
-  target
+const initialState = {}
+
+const composedEnhancers = compose(
+  applyMiddleware(...middleware),
+  ...enhancers
+) 
+
+const store = createStore(
+  rootReducer,
+  initialState,
+  composedEnhancers as any
 )
 
-serviceWorker.unregister();
+export default store
