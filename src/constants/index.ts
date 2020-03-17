@@ -1,22 +1,34 @@
+export interface Iproducts {
+  id: string;
+  name: string;
+  unitPrice: number;
+}
+
 export const products = [
   {
+    id: 'item-id-sledgehammer',
     name: 'Sledgehammer',
-    price: 125.76
+    unitPrice: 125.76,
   },
   {
+    id: 'item-id-axe',
     name: 'Axe',
-    price: 190.51
+    unitPrice: 190.51,
   },
   {
+    id: 'item-id-bandsaw',
     name: 'Bandsaw',
-    price: 562.14
+    unitPrice: 562.14,
   },
   {
-    name: 'Chisel',
-    price: 13.9
-  },
-  {
+    id: 'item-id-hacksaw',
     name: 'Hacksaw',
-    price: 19.45
+    unitPrice: 19.45,
+  },
+  {
+    id: 'item-id-chisel',
+    name: 'Chisel',
+    unitPrice: 13.9,
   }
-];
+
+]
